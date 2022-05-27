@@ -129,10 +129,15 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
-function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+function multiplyAnyArray(dynamicArray) {
+let runningTotal = 0
+for(let i = 0; i <= dynamicArray.length; i++){ 
+runningTotal = sum(runningTotal, dynamicArray[i])[0]
+console.log(runningTotal);
+ }
+ return runningTotal
 }
-
+ multiplyAnyArray(testDynamicArray)
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyAnyArray(testDynamicArray);
 
